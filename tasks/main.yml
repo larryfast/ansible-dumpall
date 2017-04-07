@@ -1,8 +1,4 @@
 ---
 
-- name:     show_registered_command_output
-  register: show_registered_command_output
-  local_action: echo "hello from local_action"
-
 - name: Dump all vars
   local_action: template src=dumpall.j2 dest={{ dumpall_localhost_destination }}
