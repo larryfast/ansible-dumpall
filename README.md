@@ -1,10 +1,10 @@
 Dumpall
 ========
 
-Dump all ansible variables into a file on localhost
+Dump all ansible variables into a file on localhost. 
 Based on the excellent work by [Lester Wade](https://coderwall.com/p/13lh6w)!
 
-NOTE: extra-vars, role-vars and a few other hidden variable sets are not yet included.
+NOTE: extra-vars, role-vars and a few other hidden variable sets are not yet included in the dump.
 
 Requirements
 ------------
