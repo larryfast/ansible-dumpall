@@ -19,8 +19,8 @@ Role Variables
 Example Playbook
 -------------------------
 
-The following code can be run stand alone to demo the role
-Or append it at the end of any playbook
+The following code can be run stand alone to demo the role.
+Or append it at the end of any playbook.
 
     - hosts: localhost
       connection: local
