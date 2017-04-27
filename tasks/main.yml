@@ -1,4 +1,7 @@
 ---
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 - name: Dump all vars
   local_action: template src=dumpall.j2 dest={{ dumpall_localhost_destination }}

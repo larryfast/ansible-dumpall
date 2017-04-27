@@ -1,4 +1,2 @@
 ---
-dumpall_flat_mode: yes
-dumpall_guest_destination: /tmp/ansible.all
-# dumpall_host_destination: /somewhere/local/
+dumpall_localhost_destination: ./dump_vars.json

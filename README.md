@@ -14,20 +14,27 @@ None.
 Role Variables
 --------------
 
-    dumpall_flat_mode: yes
-    dumpall_localhost_destination: /tmp/ansible_vars.json
+    dumpall_localhost_destination: ./dump_vars.json
 
 Example Playbook
 -------------------------
 
-Example with a host_destination will result in a dumpfile /examine/ansible.all on the localhost machine:
-
-    - hosts: servers
-      tasks & roles ...
+# The following code can be run stand alone to demo the role
+# Or append it at the end of any playbook
+    - hosts: localhost
+      connection: local
+      tasks:
+        # All Registered Tasks will appear in the dump
+        - name:     hello_server_cmd
+          register: hello_server_cmd
+          shell:    "echo Hello World from `hostname` User `whoami` PWD `pwd`"
+          changed_when:  False
 
     - hosts: localhost
+      gather_facts: yes
+      connection: local
       roles:
-         - { role: ansible-dumpall, dumpall_localhost_destination: /examine/ansible.all }
+         - { role: ansible-dumpall, dumpall_localhost_destination: ./dump_vars.json }
 
 License
 -------
